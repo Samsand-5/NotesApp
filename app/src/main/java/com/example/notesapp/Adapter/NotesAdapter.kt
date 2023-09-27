@@ -10,9 +10,13 @@ import com.example.notesapp.Model.Notes
 import com.example.notesapp.R
 import com.example.notesapp.databinding.ItemNotesBinding
 
-class NotesAdapter(val requireContext: Context, val notesList: List<Notes>) :
+class NotesAdapter(val requireContext: Context, var notesList: List<Notes>) :
     RecyclerView.Adapter<NotesAdapter.notesViewHolder>() {
 
+    fun filtering(newsFilteredList: ArrayList<Notes>) {
+        notesList = newsFilteredList
+        notifyDataSetChanged()
+    }
     class notesViewHolder(val binding : ItemNotesBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): notesViewHolder {
