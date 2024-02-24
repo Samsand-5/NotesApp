@@ -57,7 +57,7 @@
                 android:text="23 june 2023"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:maxLines="1"
                 android:textStyle="normal"
                 />
